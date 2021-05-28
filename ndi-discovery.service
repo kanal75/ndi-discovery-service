@@ -1,0 +1,13 @@
+[Unit]
+Description=NDI Directory Service
+After=network-online.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/bin/ndi-discovery-service/ndi-directory-service 
+Restart=on-failure
+RestartSec=20s
+
+[Install]
+WantedBy=multi-user.target
